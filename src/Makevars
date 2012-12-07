@@ -1,0 +1,2 @@
+PKG_CPPFLAGS=-I../inst/include -DINTERLOCKED_EXCHANGE_HACK
+PKG_LIBS=-lrt -lm

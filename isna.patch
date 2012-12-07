@@ -1,0 +1,21 @@
+--- /project/csbio/benjamin/Soft/bigmem_R/backup/bigmemory/inst/include/bigmemory/isna.hpp
++++ /project/csbio/benjamin/Soft/bigmem_R/working/bigmemory/inst/include/bigmemory/isna.hpp
+@@ -6,6 +6,7 @@
+ #endif
+ 
+ #include <math.h>
++#include <ieeefp.h>
+ #include "bigmemoryDefines.h"
+ 
+ inline bool isna( const char val ) {return NA_CHAR == val;}
+@@ -16,10 +17,6 @@
+ inline bool neginf( const char val ) {return false;}
+ inline bool neginf( const short val ) {return false;}
+ inline bool neginf( const int val ) {return false;}
+-#ifdef _MSC_VER
+-inline bool isinf( const double val ) {return !_finite(val);}
+-#endif
+-inline bool neginf( const double val ) {return isinf(val) && val < 0;}
+ 
+ inline bool posinf( const char val );
+ inline bool posinf( const short val );

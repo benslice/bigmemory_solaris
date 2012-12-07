@@ -1,0 +1,23 @@
+--- /project/csbio/benjamin/Soft/bigmem_R/backup/bigmemory/configure
++++ /project/csbio/benjamin/Soft/bigmem_R/working/bigmemory/configure
+@@ -12,13 +12,13 @@
+ 
+ echo -n "  checking for Sun Studio compiler..."
+ CC=`${R_HOME}/bin/R CMD config CC`
+-cmd=`echo $CC | grep -E 'suncc'`
+-if test -n "$cmd"; then
+-  echo "yes"
+-  FLAGS="${FLAGS} -DINTERLOCKED_EXCHANGE_HACK"
+-else
+-  echo "no"
+-fi
++#cmd=`echo $CC | grep -E 'suncc'`
++#if test -n "$cmd"; then
++  #echo "yes"
++#  FLAGS="${FLAGS} -DINTERLOCKED_EXCHANGE_HACK"
++#else
++  #echo "no"
++#fi
+ 
+ echo -n "  checking for OS..."
+ if test `uname` = "Linux" ; then
